@@ -1,0 +1,247 @@
+/*!
+autor: Karasik Vadim
+project: yitechnology
+*/
+
+@import "import/_reset.less";
+@import "import/_fonts.less";
+//@color-head: #6a7e8e;
+@dark-text: #576574;
+@light-text: #ffffff;
+@light-blue: #54a0ff;
+@dark-blue: #2e86de;
+@dark-bg: #2c2c2c;
+@light-bg: #F7F7F7;
+
+
+body {
+    font-size: 62.5%;
+    font-family: 'Montserrat-Regular', Arial, Helvetica, sans-serif;
+    color: #6a7e8e;
+    position: relative;
+}
+
+h1 {
+    font-family: 'Montserrat-Medium', Arial, Helvetica, sans-serif;
+    font-size: 600%;
+    margin-bottom: 5px;
+    line-height: 1;
+    color: #ffffff;
+
+    @media(max-width: 768px) {
+        font-size: 300%;
+    }
+}
+
+h2 {
+    font-family: 'Montserrat-Medium', Arial, Helvetica, sans-serif;
+    font-size: 400%;
+    line-height: 1.1;
+    color: @dark-text;
+
+    display: inline-block;
+    margin-bottom: 40px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid @light-blue;
+
+    @media(max-width: 768px) {
+        font-size: 270%;
+    }
+}
+
+h3 {
+    font-family: "Montserrat-Medium", Arial, Helvetica, sans-serif;
+    font-size: 200%;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    color: @light-blue;
+}
+
+h4 {
+    font-family: "Montserrat-Bold", Arial, Helvetica, sans-serif;
+    font-size: 150%;
+    line-height: 1.1;
+    margin: 25px 0 0;
+}
+
+p {
+    font-family: "Montserrat-Regular";
+    margin-bottom: 20px;
+    font-size: 160%;
+    line-height: 1.35;
+}
+
+header {
+    padding: 45px 0 200px 0;
+    background: url('../img/banner1.jpg') no-repeat top center;
+    background-size: cover;
+
+    .text {
+        margin: 150px 0 0;
+    }
+
+    .logo {
+        display: inline-block;
+        width: 200px;
+    }
+
+    nav {
+        clear: both;
+
+        ul {
+            line-height: 2.7;
+            float: right;
+
+            li {
+                display: inline-block;
+                margin: 0 10px;
+
+                a {
+                    padding: 0 0 5px 0;
+                    font-size: 160%;
+                    text-transform: uppercase;
+                    font-family: 'Montserrat-Bold', Arial, Helvetica, sans-serif;
+                    color: @light-text;
+                    transition: all 0.2s linear;
+
+
+                    &:hover {
+                        text-decoration: none;
+                        color: @light-blue;
+                        border-bottom: 2px solid @light-blue;
+                    }
+
+                    @media(max-width: 768px) {
+                        font-size: 110%;
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    p {
+        color: #ffffff;
+        font-size: 300%;
+        font-family: 'Montserrat-Light', Arial, Helvetica, sans-serif;
+        margin-bottom: 50px;
+
+        @media(max-width: 768px) {
+            font-size: 200%;
+        }
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
+
+.production {
+    padding: 70px 0;
+
+    .product-wrap {
+        padding: 0 10px;
+        margin-bottom: 20px;
+
+
+        .product {
+            padding: 50px 20px;
+            background: @light-bg;
+            text-align: center;
+            transition: all 0.2s linear;
+
+            &:hover {
+                box-shadow: 0 7px 16px 0 rgba(0, 0, 0, 0.18);
+            }
+
+            h3 {
+                margin: 20px 0;
+            }
+
+            img {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+.miru {
+    background: @light-bg;
+
+    img {
+        max-width: 100%;
+    }
+}
+
+.about-us {
+    padding: 70px 0;
+}
+
+.advantages {
+    background: @light-bg;
+
+    .advantage {
+        margin-bottom: 40px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
+
+footer {
+    padding: 70px 0;
+    background: #222f3e;
+
+    h2,
+    p {
+        color: #ffffff;
+    }
+
+    form {
+        input {
+            width: 100%;
+            display: block;
+            padding: 20px 10px;
+            margin: 0 0 10px 0;
+            border: none;
+            font-size: 160%
+        }
+
+        .msg {
+            height: 100px;
+            width: 100%;
+            display: block;
+            padding: 20px 10px;
+            margin: 0 0 10px 0;
+            border: none;
+            font-size: 160%
+        }
+    }
+}
+
+.text-block {
+    padding: 70px 70px 0 70px;
+}
+
+.button {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 20px 30px;
+    border: none;
+    border-bottom: 3px solid @dark-blue;
+    background: @light-blue;
+    text-align: center;
+    font-size: 160%;
+    color: #ffffff;
+
+    &:hover {
+        border-bottom: 3px solid @dark-blue + 10%;
+        background: @light-blue + 10%;
+    }
+}
+
+//Extra small devices Phones (<768px)	
+//Small devices Tablets (≥768px)	
+//Medium devices Desktops (≥992px)	
+//Large devices Desktops (≥1200px)
