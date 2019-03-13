@@ -25,7 +25,7 @@ h1 {
     font-family: 'Montserrat-Medium', Arial, Helvetica, sans-serif;
     font-size: 600%;
     margin-bottom: 5px;
-    line-height: 1;
+    line-height: 1.2;
     color: #ffffff;
 
     @media(max-width: 768px) {
@@ -54,7 +54,7 @@ h3 {
     font-size: 200%;
     line-height: 1.1;
     margin-bottom: 15px;
-    color: @light-blue;
+    color: @dark-text;
 }
 
 h4 {
@@ -76,13 +76,15 @@ header {
     background: url('../img/banner1.jpg') no-repeat top center;
     background-size: cover;
 
-    .text {
-        margin: 150px 0 0;
+    h1 {
+        width: 50%;
+        margin: 150px 0 50px;
     }
 
     .logo {
         display: inline-block;
         width: 200px;
+        margin-top: -10px;
     }
 
     nav {
@@ -140,6 +142,7 @@ header {
     padding: 70px 0;
 
     .product-wrap {
+        position: relative;
         padding: 0 10px;
         margin-bottom: 20px;
 
@@ -162,6 +165,29 @@ header {
                 display: inline-block;
             }
         }
+
+        .brands{
+            display: none;
+            top:0;
+            left: 10px;
+            right: 10px;
+            position: absolute;
+            height: 100%;
+            background: @light-blue;
+            padding: 20px 20px;
+            text-align: center;
+            color: @light-text;
+        
+
+            h4{
+                font-size: 200%;
+                margin-bottom: 20px;
+            }
+
+            p{
+                line-height: 1.5;
+            }
+        }
     }
 }
 
@@ -171,22 +197,48 @@ header {
     img {
         max-width: 100%;
     }
+
+    .text-block {
+        padding: 70px 200px 0 100px;
+    }
+
 }
 
 .about-us {
-    padding: 70px 0;
-}
-
-.advantages {
     background: @light-bg;
-
-    .advantage {
-        margin-bottom: 40px;
-    }
 
     img {
         max-width: 100%;
     }
+
+    .text-block {
+        padding: 70px 200px 0 100px;
+    }
+}
+
+.advantages {
+    padding: 100px 0 70px;
+    .advantage {
+        margin-bottom: 40px;
+
+        img{
+            float: left;
+        }
+
+        h3,p{
+            margin-left: 80px;
+        }
+
+        p{
+            font-size: 140%;
+        }
+    }
+
+    .text-block{
+        padding-right: 100px;
+    }
+
+    
 }
 
 footer {
@@ -218,10 +270,6 @@ footer {
             font-size: 160%
         }
     }
-}
-
-.text-block {
-    padding: 70px 70px 0 70px;
 }
 
 .button {

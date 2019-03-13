@@ -8,6 +8,11 @@ $(function () {
         }, 500);
     })
 
+    $('.product').hover(function(){
+        $(this).find('.brands').stop(true);
+        $(this).find('.brands').slideToggle();
+    })
+
     $('.openform').on('click', function(){
         $('.overlay').fadeIn()
     });
