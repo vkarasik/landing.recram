@@ -27,9 +27,13 @@ h1 {
     margin-bottom: 5px;
     line-height: 1.2;
     color: #ffffff;
+    width: 50%;
+    margin: 150px 0 50px;
 
     @media(max-width: 768px) {
+        margin: 50px 0 50px;
         font-size: 300%;
+        width: 100%;
     }
 }
 
@@ -76,23 +80,31 @@ header {
     background: url('../img/banner1.jpg') no-repeat top center;
     background-size: cover;
 
-    h1 {
-        width: 50%;
-        margin: 150px 0 50px;
+    @media(max-width: 768px) {
+        padding: 30px 0 100px 0;
     }
 
     .logo {
         display: inline-block;
-        width: 200px;
         margin-top: -10px;
+
+        @media(max-width: 768px) {
+            margin: 0 0 10px 0;
+        }
     }
 
     nav {
         clear: both;
+        @media(max-width: 768px) {
+            text-align: center;
+        }
 
         ul {
             line-height: 2.7;
             float: right;
+            @media(max-width: 768px) {
+                float: none;
+            }
 
             li {
                 display: inline-block;
@@ -105,7 +117,6 @@ header {
                     font-family: 'Montserrat-Bold', Arial, Helvetica, sans-serif;
                     color: @light-text;
                     transition: all 0.2s linear;
-
 
                     &:hover {
                         text-decoration: none;
@@ -181,7 +192,7 @@ header {
 
             h4{
                 font-size: 200%;
-                margin-bottom: 20px;
+                margin: 10px 0 20px;
             }
 
             p{
@@ -191,15 +202,25 @@ header {
     }
 }
 
+.row-flex {
+    display: flex;
+    flex-flow: row wrap;
+}
+
 .miru {
     background: @light-bg;
+
 
     img {
         max-width: 100%;
     }
 
     .text-block {
-        padding: 70px 200px 0 100px;
+        padding: 50px 20px 0 70px;
+
+        @media(max-width: 1200px) {
+            padding: 50px 40px 20px 40px;
+        }
     }
 
 }
@@ -212,14 +233,26 @@ header {
     }
 
     .text-block {
-        padding: 70px 200px 0 100px;
+        padding: 50px 20px 0 70px;
+
+        @media(max-width: 1200px) {
+            padding: 50px 40px 20px 40px;
+        }
     }
 }
 
 .advantages {
     padding: 100px 0 70px;
+
+    @media(max-width: 768px) {
+        padding: 20px 0 50px;
+    }
     .advantage {
-        margin-bottom: 40px;
+        margin-bottom: 35px;
+
+        @media(max-width: 768px) {
+            margin-bottom: 20px;
+        }
 
         img{
             float: left;
@@ -236,18 +269,40 @@ header {
 
     .text-block{
         padding-right: 100px;
+
+        @media(max-width: 768px) {
+            padding: 50px 40px 0 40px;
+        }
+
+        @media(min-width: 768px) and (max-width: 992px){
+            padding: 0 40px 0 40px;
+        }
     }
 
-    
+    .icons-block{
+        @media(max-width: 768px) {
+            padding: 20px 40px 0 40px;
+        }
+    } 
 }
 
 footer {
     padding: 70px 0;
     background: #222f3e;
+    @media(min-width: 768px) and (max-width: 992px) {
+        padding: 50px 40px 20px 40px;
+    }
 
     h2,
     p {
         color: #ffffff;
+    }
+
+    .email-us{
+        padding-left: 70px;
+        @media(max-width: 768px) {
+            padding-left: 15px;
+        }
     }
 
     form {

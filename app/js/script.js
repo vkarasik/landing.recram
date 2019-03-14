@@ -8,20 +8,7 @@ $(function () {
         }, 500);
     })
 
-    $('.product').hover(function(){
-        $(this).find('.brands').stop(true);
-        $(this).find('.brands').slideToggle();
-    })
-
-    $('.openform').on('click', function(){
-        $('.overlay').fadeIn()
-    });
-
-    $('.close').on('click', function(){
-        $('.overlay').fadeOut()
-    });
-
-    $('.form').submit(function(e){
+    $('form').submit(function(e){
         e.preventDefault();// Отмена перезагрузки страницы при submit
         var $form = $(this);
         $.ajax({
@@ -29,8 +16,8 @@ $(function () {
             url: $form.attr('action'),
             data: $form.serialize(),
             success: function(response){
-                $('form .callback').css({background: '#4caf50'}).text('Заявка принята!');
-                setTimeout(function(){$('.overlay').fadeOut()}, 300);
+                $('.form-msg').slideDown().text('Thank you, we will contact you soon!');
+                setTimeout(function(){$('.form-msg').slideUp().text('Thank you, we will contact you soon!')}, 3000);
             },
             error: function(response){
                 alert('Произошла ошибка! Пожалуйста повторите отправку!');  
