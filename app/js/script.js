@@ -5,11 +5,17 @@ $(function () {
         var ancorPosition = $ancorName.offset();
         $('body, html').animate({
             scrollTop: ancorPosition.top
-        }, 500);
+        }, 550);
+    })
+
+    $('.product').hover(function(){
+        $(this).find('.brands').stop(true);
+        $(this).find('.arrow').fadeToggle(50);
+        $(this).find('.brands').slideToggle();
     })
 
     $('form').submit(function(e){
-        e.preventDefault();// Отмена перезагрузки страницы при submit
+        e.preventDefault();// Cancel reload page submit
         var $form = $(this);
         $.ajax({
             type: $form.attr('method'),
@@ -17,14 +23,11 @@ $(function () {
             data: $form.serialize(),
             success: function(response){
                 $('.form-msg').slideDown().text('Thank you, we will contact you soon!');
-                setTimeout(function(){$('.form-msg').slideUp().text('Thank you, we will contact you soon!')}, 3000);
+                setTimeout(function(){$('.form-msg').slideUp().text('')}, 3000);
             },
             error: function(response){
-                alert('Произошла ошибка! Пожалуйста повторите отправку!');  
+                alert('An error occurred! Please resend yor message!');
             }
         });
     });
 });
-
-
-// Я зрабіў усё што змог, хто зможа, хай зробіць лепш!

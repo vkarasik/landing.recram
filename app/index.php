@@ -13,7 +13,7 @@
     <body>
         <div class="container-fluid">
         <?php 
-            include 'includes/header.html';
+            include 'includes/content.html';
             include 'includes/footer.html';
         ?>
         </div>
