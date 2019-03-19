@@ -7,7 +7,7 @@
         <meta http-equiv="Cache-control" content="no-cache">
 		<meta http-equiv="Pragma" content="no-cache">
         <meta http-equiv="Expires" content="-1">
-        <title>Recram Limited</title>
+        <title>Reckram Limited — Distributor of Electronics</title>
         <?php include 'includes/head.html'; ?>
     </head>
     <body>
