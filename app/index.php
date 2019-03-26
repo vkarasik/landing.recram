@@ -17,5 +17,6 @@
             include 'includes/footer.html';
         ?>
         </div>
+        <?php include 'includes/ycount.html'; ?>
     </body>
 </html>

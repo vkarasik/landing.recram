@@ -22,7 +22,8 @@ $(function () {
             url: $form.attr('action'),
             data: $form.serialize(),
             success: function(response){
-                $('.form-msg').slideDown().text('Thank you, we will contact you soon!');
+                $form[0].reset();
+                $('.form-msg').slideDown().text(response);
                 setTimeout(function(){$('.form-msg').slideUp().text('')}, 3000);
             },
             error: function(response){

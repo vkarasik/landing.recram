@@ -1,24 +1,18 @@
 <?php
-if(!empty($_POST)) {
+    if(!empty($_POST) && $_POST['phone']=='') {
 
-    /* $data = (object) $_POST;
-    $to = 'v.karasik@cd-life.by';
-    $subject = 'Message from RecramLimited';
-    $message = 'Name: ' . $data->name . ' Email: ' . $data->email . ' Message: ' . data;
+        $data = $_POST;
+        $to = 'v.karasik@cd-life.by';
+        $subject = 'Message from RecramLimited';
+        $message = 'Name: ' . $data['name'] . '<br>' .' Email: ' . $data['email'] .'<br>'. ' Message: ' . $data['msg'];
 
-    $headers  = "Content-type: text/html; charset=utf-8 \r\n";
-    $headers .= "From: haas.by <from@example.com>\r\n";
+        $headers[] = "Content-type: text/html; charset=utf-8 \r\n";
+        $headers[] = "From: RecramLimited.com <from@example.com>\r\n";
 
-    mail($to, $subject, $message, $headers); */
-
-    $data = $_POST;
-    $to = 'v.karasik@cd-life.by';
-    $subject = 'Message from RecramLimited';
-    $message = 'Name: ' . $data['name'] . '<br>' .' Email: ' . $data['email'] .'<br>'. ' Message: ' . $data['msg'];
-
-    $headers[] = "Content-type: text/html; charset=utf-8 \r\n";
-    $headers[] = "From: RecramLimited.com <from@example.com>\r\n";
-
-    mail($to, $subject, $message, implode($headers));
-} 
+        mail($to, $subject, $message, implode($headers));
+        echo 'Thank you, we will contact you soon!';
+    }
+    else{
+        echo 'An error occurred! Please resend yor message!';
+    }
 ?>
