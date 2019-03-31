@@ -14,13 +14,21 @@ $(function () {
         $(this).find('.brands').slideToggle();
     })
 
+    var randomNum = Math.floor((Math.random() * 1000));
+
+    $('form input').each(function(){
+        var curAttr = $(this).attr('name');
+        $(this).attr('name', curAttr+randomNum);
+
+    })
+
     $('form').submit(function(e){
-        e.preventDefault();// Cancel reload page submit
+        e.preventDefault();
         var $form = $(this);
         $.ajax({
             type: $form.attr('method'),
             url: $form.attr('action'),
-            data: $form.serialize(),
+            data: $form.serialize() + '&num=' + randomNum,
             success: function(response){
                 $form[0].reset();
                 $('.form-msg').slideDown().text(response);
