@@ -16,12 +16,12 @@ $(function () {
 
     var randomNum = Math.floor((Math.random() * 1000));
 
-    $('form input').each(function(){
+    /* $('form input').each(function(){
         var curAttr = $(this).attr('name');
         $(this).attr('name', curAttr+randomNum);
 
     })
-
+ */
     $('form').submit(function(e){
         e.preventDefault();
         var $form = $(this);

@@ -2,10 +2,10 @@
     if(!empty($_POST) && $_POST['num'] != '') {
 
         $data = $_POST;
-        $num = $_POST['num'];
-        $to = 'v.karasik@cd-life.by';
+        //$num = $_POST['num'];
+        $to = 'v.karasik@cd-life.by, t.kalchenko@cd-life.by';
         $subject = 'Message from RecramLimited';
-        $message = 'Name: ' . $data["name.$num"] . '<br>' .' Email: ' . $data["email.$num"] .'<br>'. ' Message: ' . $data['msg'];
+        $message = 'Name: ' . $data['name'] . '<br>' .' Email: ' . $data['email'] .'<br>'. ' Message: ' . $data['msg'];
 
         $headers[] = "Content-type: text/html; charset=utf-8 \r\n";
         $headers[] = "From: RecramLimited.com <from@example.com>\r\n";
